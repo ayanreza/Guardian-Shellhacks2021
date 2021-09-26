@@ -11,7 +11,7 @@
  */
 import "./i18n"
 import "./utils/ignore-warnings"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { SafeAreaProvider, initialWindowMetrics } from "react-native-safe-area-context"
 import { initFonts } from "./theme/fonts" // expo
 import * as storage from "./utils/storage"
@@ -19,6 +19,33 @@ import { useBackButtonHandler, AppNavigator, canExit, useNavigationPersistence }
 import { RootStore, RootStoreProvider, setupRootStore } from "./models"
 import { ToggleStorybook } from "../storybook/toggle-storybook"
 import { ErrorBoundary } from "./screens/error/error-boundary"
+
+import * as firebase from "firebase";
+
+import {AuthenticationContextProvider} from "./services/authentication/authentication.context.js";
+import {AuthenticationContext} from "./services/authentication/authentication.context";
+
+import { loginScreenTest } from "./screens"
+// Import the functions you need from the SDKs you need
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyAFXqqmALuguIAOa3zhtwidjriefRldV10",
+  authDomain: "guardian-627e8.firebaseapp.com",
+  projectId: "guardian-627e8",
+  storageBucket: "guardian-627e8.appspot.com",
+  messagingSenderId: "848691250382",
+  appId: "1:848691250382:web:b0ec737f5e414e85f27c9f",
+  measurementId: "G-0EEJQQR4R7"
+};
+
+// Initialize Firebase
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 // This puts screens in a native ViewController or Activity. If you want fully native
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
@@ -55,9 +82,13 @@ function App() {
   // You can replace with your own loading component if you wish.
   if (!rootStore || !isNavigationStateRestored) return null
 
+
+
+
   // otherwise, we're ready to render the app
   return (
-    <ToggleStorybook>
+  <AuthenticationContextProvider>
+    {/* <ToggleStorybook>
       <RootStoreProvider value={rootStore}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <ErrorBoundary catchErrors={"always"}>
@@ -68,7 +99,8 @@ function App() {
           </ErrorBoundary>
         </SafeAreaProvider>
       </RootStoreProvider>
-    </ToggleStorybook>
+    </ToggleStorybook> */}
+  </AuthenticationContextProvider>
   )
 }
 
