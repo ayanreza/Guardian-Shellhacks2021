@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
+import { LogOnScreen, MapScreen, ProfileScreen, RegisterScreen, LoginScreen, TabsScreen} from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
 /**
@@ -23,26 +23,25 @@ import { navigationRef } from "./navigation-utilities"
  *   https://reactnavigation.org/docs/params/
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
-export type NavigatorParamList = {
-  welcome: undefined
-  demo: undefined
-  demoList: undefined
-}
+
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
-const Stack = createNativeStackNavigator<NavigatorParamList>()
+const Stack = createNativeStackNavigator()
 
 const AppStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
-      initialRouteName="welcome"
+      initialRouteName="logon"
     >
-      <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="demo" component={DemoScreen} />
-      <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="tabs" component={TabsScreen} />
+      <Stack.Screen name="logon" component={LogOnScreen} />
+      <Stack.Screen name="login" component={LoginScreen} />
+      <Stack.Screen name="register" component={RegisterScreen} />
+      <Stack.Screen name="map" component={MapScreen} />
+      <Stack.Screen name="profile" component={ProfileScreen} />
     </Stack.Navigator>
   )
 }
