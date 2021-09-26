@@ -45,7 +45,7 @@ var firebaseConfig = {
 // Initialize Firebase
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
-  const fbRes = firebase.auth().signInWithEmailAndPassword('email@gmail.com', 'password1');
+  const fbRes = firebase.auth().signInWithEmailAndPassword('email@gmail.com', 'password');
   fbRes.then((val) => {
     console.log('from promise')
   })
@@ -94,7 +94,7 @@ function App() {
   // otherwise, we're ready to render the app
   return (
   <AuthenticationContextProvider>
-    {/* <ToggleStorybook>
+    <ToggleStorybook>
       <RootStoreProvider value={rootStore}>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <ErrorBoundary catchErrors={"always"}>
@@ -105,7 +105,7 @@ function App() {
           </ErrorBoundary>
         </SafeAreaProvider>
       </RootStoreProvider>
-    </ToggleStorybook> */}
+    </ToggleStorybook>
   </AuthenticationContextProvider>
   )
 }
