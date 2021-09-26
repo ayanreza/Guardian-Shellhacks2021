@@ -10,5 +10,7 @@ export const initFonts = async () => {
     "Comfortaa": require("./Comfortaa-Regular.ttf"),
     Roboto: require("./Roboto-Regular.ttf"),
     "Roboto": require("./Roboto-Regular.ttf"),
+    RobotoBold: require("./Roboto-Bold.ttf"),
+    "RobotoBold": require("./Roboto-Bold.ttf"),
   })
 }

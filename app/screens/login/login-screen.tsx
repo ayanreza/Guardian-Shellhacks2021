@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   input: {
     margin: 8,
-    padding: 10,
+    padding: 15,
     borderWidth: 2,
     borderColor: 'black',
     fontSize: 15,
@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 36,
     fontFamily: "Comfortaa",
-    paddingTop: 30,
-    margin: 8,
+    marginTop: 100,
+    marginBottom: 30,
+    marginLeft: 8,
   }
 })
