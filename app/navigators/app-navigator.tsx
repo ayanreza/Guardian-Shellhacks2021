@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { LogOnScreen, MapScreen, ProfileScreen, RegisterScreen, LoginScreen, TabsScreen} from "../screens"
+import { LogOnScreen, MapScreen, ProfileScreen, RegisterScreen, LoginScreen, TabsScreen, LockScreen} from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
 /**
@@ -34,10 +34,10 @@ const AppStack = () => {
       screenOptions={{
         headerShown: true,
       }}
-      initialRouteName="logon"
+      initialRouteName="lock"
     >
       <Stack.Screen name="tabs" component={TabsScreen} />
-      <Stack.Screen name="logon" component={LogOnScreen} />
+      <Stack.Screen name="lock" component={LockScreen} />
       <Stack.Screen name="login" component={LoginScreen} />
       <Stack.Screen name="register" component={RegisterScreen} />
       <Stack.Screen name="map" component={MapScreen} />
