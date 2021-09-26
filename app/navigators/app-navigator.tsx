@@ -38,7 +38,7 @@ const AppStack = () => {
 
     <Stack.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
       }}
       initialRouteName="lock"
     >
