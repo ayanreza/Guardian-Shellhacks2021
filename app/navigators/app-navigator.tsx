@@ -34,11 +34,11 @@ const AppStack = () => {
   StatusBar.setBarStyle('dark-content', true);
   return (
 
-    
+
 
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
       initialRouteName="lock"
     >
