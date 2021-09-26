@@ -9,7 +9,7 @@ import {
   GradientBackground,
   AutoImage as Image,
 } from "../../components"
-import { useNavigation } from "@react-navigation/native"
+import { useNavigation, useTheme} from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 
@@ -20,11 +20,30 @@ export const LoginScreen = observer(function LoginScreen() {
   // Pull in navigation via hook
   const navigation = useNavigation()
   const signIn = () => navigation.navigate('tabs')
+  const { colors } = useTheme();
 
   return (
     <Screen style={styles.root} preset="scroll">
+      <Text style={styles.title}>
+        Log In
+      </Text>
+      <TextInput
+        placeholder="Username"
+        style={[
+          styles.input
+        ]}
+      />
+      <TextInput
+        placeholder="Password"
+        secureTextEntry
+        style={[
+          styles.input
+        ]}
+      />
       <Button mode="contained" onPress={signIn} style={styles.button}>
-        <Text> Sign In </Text>
+        <Text style={styles.text}>
+          Log In
+        </Text>
       </Button>
     </Screen>
   )
@@ -32,7 +51,7 @@ export const LoginScreen = observer(function LoginScreen() {
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: "#3d7ea4",
+    backgroundColor: "#ffffff",
     flex: 1,
   },
   full: {
@@ -41,30 +60,30 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: 16,
-    // justifyContent: 'center',
   },
   input: {
     margin: 8,
-    padding: 10,
-    borderRadius: 3,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: 'rgba(0, 0, 0, 0.08)',
+    padding: 15,
+    borderWidth: 2,
+    borderColor: 'black',
+    fontSize: 15,
   },
   button: {
     margin: 8,
-    backgroundColor: "#c77457",
+    backgroundColor: "#000000",
   },
   text: {
     textAlign: 'center',
     margin: 8,
+    fontSize: 15,
+    fontWeight: 'bold',
   },
-  logo: {
-    alignSelf: "center",
-    marginTop: 50,
-    marginBottom: 25,
-    maxWidth: "100%",
-    width: "100%",
-    height: 100,
-    borderRadius: 10
+  title: {
+    color: 'black',
+    fontSize: 36,
+    fontFamily: "Comfortaa",
+    marginTop: 100,
+    marginBottom: 30,
+    marginLeft: 8,
   }
 })

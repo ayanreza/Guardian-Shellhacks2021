@@ -29,6 +29,7 @@ import { navigationRef } from "./navigation-utilities"
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
 const Stack = createNativeStackNavigator()
+StatusBar.setBarStyle('dark-content', true);
 
 const AppStack = () => {
   return (
@@ -37,7 +38,7 @@ const AppStack = () => {
 
     <Stack.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
       }}
       initialRouteName="lock"
     >
