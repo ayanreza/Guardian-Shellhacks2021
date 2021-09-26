@@ -5,11 +5,13 @@
  * and a "main" flow which the user will use once logged in.
  */
 import React from "react"
-import { useColorScheme } from "react-native"
+import { useColorScheme, StatusBar } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { LogOnScreen, MapScreen, ProfileScreen, RegisterScreen, LoginScreen, TabsScreen, LockScreen} from "../screens"
 import { navigationRef } from "./navigation-utilities"
+
+
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -30,6 +32,9 @@ const Stack = createNativeStackNavigator()
 
 const AppStack = () => {
   return (
+
+    
+
     <Stack.Navigator
       screenOptions={{
         headerShown: true,
