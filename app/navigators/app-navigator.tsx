@@ -29,9 +29,9 @@ import { navigationRef } from "./navigation-utilities"
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
 const Stack = createNativeStackNavigator()
-StatusBar.setBarStyle('dark-content', true);
 
 const AppStack = () => {
+  StatusBar.setBarStyle('dark-content', true);
   return (
 
     
