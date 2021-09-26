@@ -45,6 +45,11 @@ var firebaseConfig = {
 // Initialize Firebase
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
+  const fbRes = firebase.auth().signInWithEmailAndPassword('email@gmail.com', 'password1');
+  fbRes.then((val) => {
+    console.log('from promise')
+  })
+  alert('firebase connected');
 }
 
 // This puts screens in a native ViewController or Activity. If you want fully native
@@ -57,6 +62,7 @@ export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
  * This is the root component of our app.
  */
 function App() {
+  <text>hello</text>
   const [rootStore, setRootStore] = useState<RootStore | undefined>(undefined)
 
   useBackButtonHandler(canExit)
