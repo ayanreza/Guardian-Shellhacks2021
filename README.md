@@ -1,54 +1,21 @@
-# Parstagram - Part II
+# Guardian
 
-This is an Instagram clone with a custom Parse backend that allows a user to post photos, view a global photos feed, and add comments!
+This is a mobile app developed with react native which allows users to request assistance from qualified professionals
 
-Time spent: **2** hours spent in total
+Time spent: **25** hours spent in total
 
 ## User Stories
 
-The following **required** functionality is completed:
+- [X] User can request assitance from nearby professionals
+- [X] Professionals can view who needs help in the area and what the situation is on a dynamic map
+- [X] Users and Professionals can make an account and login which is authenticated by Firebase
+- [X] Professionals have a user profile which displays their skills and expertise
 
-- [X] User stays logged in across restarts. (1pt)
-- [X] User can log out. (1pt)
-- [X] User can view comments on a post. (3pts)
-- [X] User can add a new comment. (5pts)
 
-The following **bonus** features are implemented:
-
-- [ ] User can add a profile picture. (2pts)
-- [ ] Profile pictures are shown for posts and comments. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-![parstagram_p2](https://user-images.githubusercontent.com/55410958/130301798-e07178a8-f19b-4bfe-9c7d-4e7b283dbe0d.gif)
+![ezgif com-optimize](https://user-images.githubusercontent.com/55410958/134815616-69e4b3de-a756-4111-a4c3-6e75fba0b03b.gif)
 
-
-
-# Parstagram - Part I
-
-This is an Instagram clone with a custom Parse backend that allows a user to post photos and view a global photos feed.
-
-Time spent: **2** hours spent in total
-
-## User Stories
-
-The following **required** functionality is completed:
-
-- [X] User sees app icon in home screen and styled launch screen. (1pt)
-- [X] User can sign up to create a new account. (1pt)
-- [X] User can log in. (1pt)
-- [X] User can take a photo, add a caption, and post it to the server. (3pt)
-- [X] User can view the last 20 posts. (4pts)
-
-The following **bonus** features are implemented:
-
-- [ ] User can pull to refresh. (1pt)
-- [ ] User can load past posts infinitely. (2pts)
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-![ezgif com-optimize](https://user-images.githubusercontent.com/55410958/129307197-93a311df-9dc5-44f8-a62d-18b9dd053bed.gif)
